@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-10T18:28:54.823Z",
+    "end": "2022-12-10T18:29:46.184Z",
+    "duration": 51361,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c9b4fde1-373d-4c60-bb54-cad6b1852682",
+      "title": "",
+      "fullFile": "cypress\\test\\authTest.cy.js",
+      "file": "cypress\\test\\authTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e0498faf-227d-4448-95fd-be3ac28e1ed1",
+          "title": "login/signup suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should signup with valid",
+              "fullTitle": "login/signup suite should signup with valid",
+              "timedOut": null,
+              "duration": 17831,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)`).should('be.visible').click();\n  cy.get(`input[placeholder='yours@example.com']`).type(\"ghi@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass12rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n});\ncy.get(`.chakra-heading.css-kmq9po`).should('contain.text', 'Automation Camp Store');\ncy.url().should('include', '/products');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4000ms: The command was expected to run against origin `https://ui-automation-camp.vercel.app` but the application is at origin `https://dev-mlluudmotpwoldtv.us.auth0.com`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n\nUsing `cy.origin()` to wrap the commands run on `https://dev-mlluudmotpwoldtv.us.auth0.com` will likely fix this issue.\n\n`cy.origin('https://dev-mlluudmotpwoldtv.us.auth0.com', () => {`\n`  <commands targeting https://dev-mlluudmotpwoldtv.us.auth0.com go here>`\n`})`\n\nhttps://on.cypress.io/cy-visit-succeeded-but-commands-fail",
+                "estack": "CypressError: Timed out retrying after 4000ms: The command was expected to run against origin `https://ui-automation-camp.vercel.app` but the application is at origin `https://dev-mlluudmotpwoldtv.us.auth0.com`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n\nUsing `cy.origin()` to wrap the commands run on `https://dev-mlluudmotpwoldtv.us.auth0.com` will likely fix this issue.\n\n`cy.origin('https://dev-mlluudmotpwoldtv.us.auth0.com', () => {`\n`  <commands targeting https://dev-mlluudmotpwoldtv.us.auth0.com go here>`\n`})`\n\nhttps://on.cypress.io/cy-visit-succeeded-but-commands-fail\n    at cypressErr (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:160032:18)\n    at Object.errByPath (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:160101:10)\n    at Object.commandCanCommunicateWithAUT (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:157146:98)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:142808:22)\n    at Object.subjectFn (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:154816:16)\n    at $Cy.verifyUpcomingAssertions (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:134220:31)\n    at onRetry (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:154808:15)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise.attempt.Promise.try (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:8601:29)\n    at whenStable (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:151463:65)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:150871:14)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise._settlePromiseFromHandler (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9262:31)\n    at Promise._settlePromise (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9319:18)\n    at Promise._settlePromise0 (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9364:10)\n    at Promise._settlePromises (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9444:18)\n    at Promise._fulfill (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9388:18)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11002:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/test/authTest.cy.js:22:11)",
+                "diff": null
+              },
+              "uuid": "c9c372ad-1988-4f92-96f8-05fa299b48c3",
+              "parentUUID": "e0498faf-227d-4448-95fd-be3ac28e1ed1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should login with valid",
+              "fullTitle": "login/signup suite should login with valid",
+              "timedOut": null,
+              "duration": 12746,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n});\ncy.get(`.chakra-heading.css-kmq9po`).should('contain.text', 'Automation Camp Store');\ncy.url().should('include', '/products');",
+              "err": {},
+              "uuid": "6e5a2b42-5cb0-4774-9bb1-260a9d8d4b3f",
+              "parentUUID": "e0498faf-227d-4448-95fd-be3ac28e1ed1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should attempt to login with a non-existent user",
+              "fullTitle": "login/signup suite should attempt to login with a non-existent user",
+              "timedOut": null,
+              "duration": 7043,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"pqr@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123r\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('contain.text', 'Wrong');\n});",
+              "err": {},
+              "uuid": "38476f26-ce3c-4f2f-b868-711323af5de6",
+              "parentUUID": "e0498faf-227d-4448-95fd-be3ac28e1ed1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "attempt to signup with existing account",
+              "fullTitle": "login/signup suite attempt to signup with existing account",
+              "timedOut": null,
+              "duration": 7039,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)`).should('be.visible').click();\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass12rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('be.visible');\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('contain.text', `We're sorry`);\n});",
+              "err": {},
+              "uuid": "b0f0bbe0-a230-4262-ba25-9072a6ea669b",
+              "parentUUID": "e0498faf-227d-4448-95fd-be3ac28e1ed1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check the forgot password flow",
+              "fullTitle": "login/signup suite should check the forgot password flow",
+              "timedOut": null,
+              "duration": 5883,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  //Click forgot password button\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(4) > a:nth-child(1)`).click(); //Title of page should include text Reset your password\n  cy.get(`div[title='Reset your password']`).should('have.text', 'Reset your password'); //Add email and click send email\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > input:nth-child(2)`).type('xyz@gmail.com');\n  cy.get(`.auth0-label-submit`).click(); //check for confirmation message\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('contain.text', `We've just sent`);\n});",
+              "err": {},
+              "uuid": "88ea7f7b-d019-415b-816b-c94518774919",
+              "parentUUID": "e0498faf-227d-4448-95fd-be3ac28e1ed1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6e5a2b42-5cb0-4774-9bb1-260a9d8d4b3f",
+            "38476f26-ce3c-4f2f-b868-711323af5de6",
+            "b0f0bbe0-a230-4262-ba25-9072a6ea669b",
+            "88ea7f7b-d019-415b-816b-c94518774919"
+          ],
+          "failures": [
+            "c9c372ad-1988-4f92-96f8-05fa299b48c3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 50542,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "automation-bootcamp-final-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "clean": "rm -R -f cypress/reports; mkdir cypress/reports; rm -f mochawesome.json",
+      "run": "npx cypress run",
+      "test": "npm-run-all clean run report -c",
+      "test:spec": "npm-run-all clean \"run -- --spec {1}\" report -c --",
+      "report": "npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx margemochawesome.json && start mochawesome-report/mochawesome.html && rm -f mochawesome.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPowell1/Automation-Bootcamp-Final-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SPowell1/Automation-Bootcamp-Final-Project/issues"
+  },
+  "homepage": "https://github.com/SPowell1/Automation-Bootcamp-Final-Project#readme",
+  "devDependencies": {
+    "cypress": "^12.0.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

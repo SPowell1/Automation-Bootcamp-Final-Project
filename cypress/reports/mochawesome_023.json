@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-14T02:02:41.992Z",
+    "end": "2022-12-14T02:03:09.806Z",
+    "duration": 27814,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "da537f9d-64db-4fa4-9343-15a5915905b9",
+      "title": "",
+      "fullFile": "cypress\\test\\prodGalleryTest.cy.js",
+      "file": "cypress\\test\\prodGalleryTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8c05430b-4e53-4503-a4f9-57056ca554fc",
+          "title": "Product Gallery Homepage Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should increase product quantity and add it to cart",
+              "fullTitle": "Product Gallery Homepage Test Suite should increase product quantity and add it to cart",
+              "timedOut": null,
+              "duration": 25429,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Login\ncy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n}); //Go to the Quality Fitted Hat Quantity box and increase the quantity to 2\n_prodGallery.default.updateHatQty();\n_prodGallery.default.hatAddToCart(); //  productGalleryPage.navigateToCartPage()\n//  cy.get(`.snipcart-item-line__container`).contains('Washed Distressed Baseball-Cap')\n// //cy.get(productGalleryPage.cartQtyField)\n// //  .should('have.attr', 'aria-valuetext')\n// //      .and('equal','2')\n//  //Add the Quality Fitted Hat to Cart\n//  cy.url().should('include','/products#/cart') //check that it navigate to the cart summary page\n//  cy.get(`.snipcart-item-line__header`).should('include.text', 'Quality Fitted Hat ')",
+              "err": {},
+              "uuid": "cba8f931-99da-47e8-acf5-030a94ef6a0f",
+              "parentUUID": "8c05430b-4e53-4503-a4f9-57056ca554fc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cba8f931-99da-47e8-acf5-030a94ef6a0f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25429,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

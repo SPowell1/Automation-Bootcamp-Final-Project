@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-14T02:22:08.310Z",
+    "end": "2022-12-14T02:22:35.076Z",
+    "duration": 26766,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c8b94197-1283-402a-86c0-75bc2d434b40",
+      "title": "",
+      "fullFile": "cypress\\test\\prodGalleryTest.cy.js",
+      "file": "cypress\\test\\prodGalleryTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "662da01e-b3db-4ba8-bf2b-72f37570a7f3",
+          "title": "Product Gallery Homepage Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should increase product quantity and add it to cart",
+              "fullTitle": "Product Gallery Homepage Test Suite should increase product quantity and add it to cart",
+              "timedOut": null,
+              "duration": 25711,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Login\ncy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n}); //Go to the Quality Fitted Hat Quantity box and increase the quantity to 2\n_prodGallery.default.updateHatQty();\n_prodGallery.default.hatAddToCart();\ncy.wait(`#top-cart`);\ncy.get(`#top-cart`).click();\ncy.url().should('include', '/products#/cart'); //check that it navigate to the cart summary page\n//  productGalleryPage.navigateToCartPage()\n//cy.get(`.snipcart-item-line__container`).contains('Washed Distressed Baseball-Cap')\n// //cy.get(productGalleryPage.cartQtyField)\n// //  .should('have.attr', 'aria-valuetext')\n// //      .and('equal','2')\n//  //Add the Quality Fitted Hat to Cart\n//  cy.url().should('include','/products#/cart') //check that it navigate to the cart summary page\n//  cy.get(`.snipcart-item-line__header`).should('include.text', 'Quality Fitted Hat ')",
+              "err": {
+                "message": "CypressError: `cy.wait()` could not find a registered alias for: `@#top-cart`.\nYou have not aliased anything yet.",
+                "estack": "CypressError: `cy.wait()` could not find a registered alias for: `@#top-cart`.\nYou have not aliased anything yet.\n    at $Cy.aliasNotFoundFor (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133841:74)\n    at waitForXhr (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:145950:12)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:146051:14)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at MappingPromiseArray._promiseFulfilled (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:8447:38)\n    at PromiseArray._iterate (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9649:31)\n    at MappingPromiseArray.init (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9613:10)\n    at MappingPromiseArray._asyncInit (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:8416:10)\n    at _drainQueueStep (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:6038:12)\n    at _drainQueue (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:6027:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:6043:5)\n    at Async.drainQueues (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:5913:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/test/prodGalleryTest.cy.js:50:12)",
+                "diff": null
+              },
+              "uuid": "59f0616f-451b-4611-b4fb-15c9e2cae915",
+              "parentUUID": "662da01e-b3db-4ba8-bf2b-72f37570a7f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "59f0616f-451b-4611-b4fb-15c9e2cae915"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25711,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

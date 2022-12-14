@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-12T23:50:25.699Z",
+    "end": "2022-12-12T23:50:47.576Z",
+    "duration": 21877,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "279f6ab1-0f17-4dbb-9481-519e20e0a92e",
+      "title": "",
+      "fullFile": "cypress\\test\\prodGalleryTest.cy.js",
+      "file": "cypress\\test\\prodGalleryTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "95fbeef8-2e93-4510-a41c-b1647e68d31b",
+          "title": "Product Gallery Homepage Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should check the product gallery page",
+              "fullTitle": "Product Gallery Homepage Test Suite should check the product gallery page",
+              "timedOut": null,
+              "duration": 21695,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n}); //Click Quality Fitted Hat Image to view product details\n_prodGallery.default.navigateToProductDetails();\ncy.get(`body > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > h2:nth-child(1)`).should('have.text', 'Quality Fitted Hat'); //return to product page using the back to products button\ncy.get(`.chakra-heading.css-18j379d`).click(); //Go to the Quality Fitted Hat Quantity box and increase the quantity to 2\n_prodGallery.default.updateHatQty();\ncy.get(_prodGallery.default.cartQtyField).should('have.attr', 'aria-valuetext').and('equal', '2'); //Add the Quality Fitted Hat to Cart\n_prodGallery.default.hatAddToCart();\ncy.url().should('include', '/products#/cart'); //check that it navigate to the cart summary page\ncy.get(`.snipcart-item-line__header`).should('have.text', 'Quality Fitted Hat '); //navigate back to product page\ncy.get(`.snipcart-modal__close-title.snipcart__font--std`).click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `body > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > h2:nth-child(1)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `body > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > h2:nth-child(1)`, but never found it.\n    at Context.eval (webpack:///./cypress/test/prodGalleryTest.cy.js:23:155)",
+                "diff": null
+              },
+              "uuid": "51657b78-474b-498a-8e51-8eda08b50f5d",
+              "parentUUID": "95fbeef8-2e93-4510-a41c-b1647e68d31b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "51657b78-474b-498a-8e51-8eda08b50f5d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 21695,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

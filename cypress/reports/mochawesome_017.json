@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-14T01:28:46.981Z",
+    "end": "2022-12-14T01:28:51.637Z",
+    "duration": 4656,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b95bc2a8-34e9-4ad2-b777-1fbb79b84fcc",
+      "title": "",
+      "fullFile": "cypress\\test\\prodGalleryTest.cy.js",
+      "file": "cypress\\test\\prodGalleryTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e4cc5057-52be-434b-b6d7-053e09e3a5d4",
+          "title": "Product Gallery Homepage Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should increase product quantity and add it to cart",
+              "fullTitle": "Product Gallery Homepage Test Suite should increase product quantity and add it to cart",
+              "timedOut": null,
+              "duration": 4185,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Login\ncy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n}); //Go to the Quality Fitted Hat Quantity box and increase the quantity to 2\n_prodGallery.default.updateHatQty();\n_prodGallery.default.navigateToCartPage();\ncy.get(`.snipcart-item-line__container`).contains('Washed Distressed Baseball-Cap'); //cy.get(productGalleryPage.cartQtyField)\n//  .should('have.attr', 'aria-valuetext')\n//      .and('equal','2')\n//Add the Quality Fitted Hat to Cart\n_prodGallery.default.hatAddToCart();\ncy.url().should('include', '/products#/cart'); //check that it navigate to the cart summary page\ncy.get(`.snipcart-item-line__header`).should('include.text', 'Quality Fitted Hat ');",
+              "err": {
+                "message": "TypeError: this.cartBtn.scrollIntoView is not a function",
+                "estack": "TypeError: this.cartBtn.scrollIntoView is not a function\n    at ProductGallery.navigateToCartPage (webpack:///./cypress/pageObjects/prodGallery.page.js:46:21)\n    at Context.eval (webpack:///./cypress/test/prodGalleryTest.cy.js:49:28)",
+                "diff": null
+              },
+              "uuid": "894d260e-fbd4-465a-bc97-6b6a8a116074",
+              "parentUUID": "e4cc5057-52be-434b-b6d7-053e09e3a5d4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "894d260e-fbd4-465a-bc97-6b6a8a116074"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4185,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

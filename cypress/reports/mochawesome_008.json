@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-13T02:59:31.811Z",
+    "end": "2022-12-13T02:59:54.334Z",
+    "duration": 22523,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cc510c9c-74cc-4baf-b95e-8a4ef3cf8ec3",
+      "title": "",
+      "fullFile": "cypress\\test\\prodGalleryTest.cy.js",
+      "file": "cypress\\test\\prodGalleryTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c546692-64d5-4abe-9ed5-cca8f1a71f01",
+          "title": "Product Gallery Homepage Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate to the product gallery page via the porduct image",
+              "fullTitle": "Product Gallery Homepage Test Suite should navigate to the product gallery page via the porduct image",
+              "timedOut": null,
+              "duration": 22183,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n}); //Click Quality Fitted Hat Image to view product details\n_prodGallery.default.navigateToProductDetails();\ncy.get(`body > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > h2:nth-child(1)`).should('have.text', 'Quality Fitted Hat '); //return to product page using the back to products button\ncy.get(`.chakra-heading.css-18j379d`).click();",
+              "err": {},
+              "uuid": "ee2e5d6a-7323-48da-baa1-217e64253f13",
+              "parentUUID": "6c546692-64d5-4abe-9ed5-cca8f1a71f01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee2e5d6a-7323-48da-baa1-217e64253f13"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22183,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -23,7 +23,7 @@ describe ('login/signup suite', ()=>{
         cy.url().should('include','/products')
     }),
 
-     it('should login with valid',()=>{
+    it('should login with valid',()=>{
 
         cy.get("#signInOrRegister").click();
         

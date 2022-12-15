@@ -5,9 +5,14 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
+ contact
     "start": "2022-12-14T22:52:26.168Z",
     "end": "2022-12-14T22:52:53.069Z",
     "duration": 26901,
+    "start": "2022-12-10T20:16:13.189Z",
+    "end": "2022-12-10T20:16:33.389Z",
+    "duration": 20200,
+ main
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,33 +23,52 @@
   },
   "results": [
     {
+ contact
       "uuid": "269a627f-4d0e-4e58-8eef-bf28fb2382e4",
       "title": "",
       "fullFile": "cypress\\test\\contactTest.cy.js",
       "file": "cypress\\test\\contactTest.cy.js",
+
+      "uuid": "1407c54f-3a14-40ca-994b-ea6670a645c6",
+      "title": "",
+      "fullFile": "cypress\\test\\authTest.cy.js",
+      "file": "cypress\\test\\authTest.cy.js",
+ main
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
+contact
           "uuid": "c4d64c61-4bc4-45ee-b6ab-b3f87afc8635",
           "title": "Contact Page Test Suite",
+
+          "uuid": "529b6977-1e7c-41dd-8ac0-51851e2e9eff",
+          "title": "login/signup suite",
+ main
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
+contact
               "title": "should navigte to the Quality Works Twitter page",
               "fullTitle": "Contact Page Test Suite should navigte to the Quality Works Twitter page",
               "timedOut": null,
               "duration": 26243,
+              "title": "should signup with valid",
+              "fullTitle": "login/signup suite should signup with valid",
+              "timedOut": null,
+              "duration": 19901,
+ main
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
+ contact
               "code": "//navigate to contact page\n_contact.default.contactBtn.click(); //locate twitter button and click it\n\ncy.get('a').invoke('removeAttr', 'target').click();\ncy.url().should('include', 'twitter.com');",
               "err": {
                 "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
@@ -53,6 +77,16 @@
               },
               "uuid": "9503db05-9ff7-4c33-96a6-37c0354c2234",
               "parentUUID": "c4d64c61-4bc4-45ee-b6ab-b3f87afc8635",
+
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`auth0-lock-tabs-container>ul>li:nth-child(2)>a`).click();\n  cy.get(`input[placeholder='yours@example.com']`).type(\"ghi@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass12rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n});\ncy.get(`.chakra-heading.css-kmq9po`).should('contain.text', 'Automation Camp Store');\ncy.url().should('include', '/products');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `auth0-lock-tabs-container>ul>li:nth-child(2)>a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `auth0-lock-tabs-container>ul>li:nth-child(2)>a`, but never found it.\n    at Context.eval (webpack:///./cypress/test/authTest.cy.js:10:11)",
+                "diff": null
+              },
+              "uuid": "8f535710-0d28-41fa-8604-cf9a76224d89",
+              "parentUUID": "529b6977-1e7c-41dd-8ac0-51851e2e9eff",
+main
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +94,18 @@
           "suites": [],
           "passes": [],
           "failures": [
+ contact
             "9503db05-9ff7-4c33-96a6-37c0354c2234"
           ],
           "pending": [],
           "skipped": [],
           "duration": 26243,
+            "8f535710-0d28-41fa-8604-cf9a76224d89"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19901,
+ main
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

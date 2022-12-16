@@ -43,7 +43,7 @@ class ProductGallery{
     }
 
     navigateToCartPage(){
-        this.cartBtn.scrollIntoView()
+        //this.cartBtn.scrollIntoView()
         this.cartBtn.click()
     }
 

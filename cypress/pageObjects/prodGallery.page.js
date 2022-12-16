@@ -2,7 +2,7 @@ class ProductGallery{
     //#region Selectors
 
     get hatAddToCartBtn(){
-        return cy.get(`.chakra-button.snipcart-add-item.css-betff9[data-item-id='quality-hat-model']`)
+        return cy.get(`button[data-item-name$='Quality Fitted Hat']`)
     }
 
     get hatImgBtn(){

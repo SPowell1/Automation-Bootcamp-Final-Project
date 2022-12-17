@@ -14,6 +14,7 @@ module.exports = defineConfig({
         overwrite: false,
         html: false,
         json: true
-      }
+    },
+    chromeWebSecurity: false,
   },
  })

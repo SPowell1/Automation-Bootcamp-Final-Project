@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-17T22:17:32.590Z",
+    "end": "2022-12-17T22:17:48.227Z",
+    "duration": 15637,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8b6d34af-f86f-4e6b-a4ad-e366bc1da1a7",
+      "title": "",
+      "fullFile": "cypress\\test\\authTest.cy.js",
+      "file": "cypress\\test\\authTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c3022554-530a-44ce-b485-37fc89212628",
+          "title": "login/signup suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should signup with valid",
+              "fullTitle": "login/signup suite should signup with valid",
+              "timedOut": null,
+              "duration": 15469,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)`).should('be.visible').click();\n  cy.get(`input[placeholder='yours@example.com']`).type(\"ghi@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass12rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n});\ncy.get(`.chakra-heading.css-kmq9po`).should('contain.text', 'Automation Camp Store');\ncy.url().should('include', '/products');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4000ms: The command was expected to run against origin `https://ui-automation-camp.vercel.app` but the application is at origin `https://dev-mlluudmotpwoldtv.us.auth0.com`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n\nUsing `cy.origin()` to wrap the commands run on `https://dev-mlluudmotpwoldtv.us.auth0.com` will likely fix this issue.\n\n`cy.origin('https://dev-mlluudmotpwoldtv.us.auth0.com', () => {`\n`  <commands targeting https://dev-mlluudmotpwoldtv.us.auth0.com go here>`\n`})`\n\nhttps://on.cypress.io/cy-visit-succeeded-but-commands-fail",
+                "estack": "CypressError: Timed out retrying after 4000ms: The command was expected to run against origin `https://ui-automation-camp.vercel.app` but the application is at origin `https://dev-mlluudmotpwoldtv.us.auth0.com`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n\nUsing `cy.origin()` to wrap the commands run on `https://dev-mlluudmotpwoldtv.us.auth0.com` will likely fix this issue.\n\n`cy.origin('https://dev-mlluudmotpwoldtv.us.auth0.com', () => {`\n`  <commands targeting https://dev-mlluudmotpwoldtv.us.auth0.com go here>`\n`})`\n\nhttps://on.cypress.io/cy-visit-succeeded-but-commands-fail\n    at cypressErr (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:160032:18)\n    at Object.errByPath (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:160101:10)\n    at Object.commandCanCommunicateWithAUT (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:157146:98)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:142808:22)\n    at Object.subjectFn (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:154816:16)\n    at $Cy.verifyUpcomingAssertions (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:134220:31)\n    at onRetry (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:154808:15)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise.attempt.Promise.try (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:8601:29)\n    at whenStable (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:151463:65)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:150871:14)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise._settlePromiseFromHandler (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9262:31)\n    at Promise._settlePromise (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9319:18)\n    at Promise._settlePromise0 (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9364:10)\n    at Promise._settlePromises (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9444:18)\n    at Promise._fulfill (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9388:18)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11002:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/test/authTest.cy.js:22:11)",
+                "diff": null
+              },
+              "uuid": "eaf9c13d-fbcd-4c38-b953-fc667e6b799d",
+              "parentUUID": "c3022554-530a-44ce-b485-37fc89212628",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "eaf9c13d-fbcd-4c38-b953-fc667e6b799d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15469,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

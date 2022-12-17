@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-17T22:34:05.169Z",
+    "end": "2022-12-17T22:34:37.059Z",
+    "duration": 31890,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33ea6d14-e003-4bef-9f18-b56801f51f4d",
+      "title": "",
+      "fullFile": "cypress\\test\\authTest.cy.js",
+      "file": "cypress\\test\\authTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "80434f58-2de4-4dec-ac1d-b7fd6cd4ee48",
+          "title": "login/signup suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login with valid",
+              "fullTitle": "login/signup suite should login with valid",
+              "timedOut": null,
+              "duration": 13898,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n});\ncy.get(`.chakra-heading.css-kmq9po`).should('contain.text', 'Automation Camp Store');\ncy.url().should('include', '/products');",
+              "err": {},
+              "uuid": "3f4792b4-ef97-4123-80bc-6ca62bb812f5",
+              "parentUUID": "80434f58-2de4-4dec-ac1d-b7fd6cd4ee48",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should attempt to login with a non-existent user",
+              "fullTitle": "login/signup suite should attempt to login with a non-existent user",
+              "timedOut": null,
+              "duration": 5658,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`input[placeholder='yours@example.com']`).type(\"pqr@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass123r\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('contain.text', 'Wrong');\n});",
+              "err": {},
+              "uuid": "f2d710fe-ccfa-4143-ad3d-f51c399cf82f",
+              "parentUUID": "80434f58-2de4-4dec-ac1d-b7fd6cd4ee48",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "attempt to signup with existing account",
+              "fullTitle": "login/signup suite attempt to signup with existing account",
+              "timedOut": null,
+              "duration": 5720,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)`).should('be.visible').click();\n  cy.get(`input[placeholder='yours@example.com']`).type(\"xyz@gmail.com\");\n  cy.get(`input[placeholder='your password']`).type(\"Pass12rd\", {\n    log: false\n  });\n  cy.get(\".auth0-label-submit\").click();\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('be.visible');\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('contain.text', `We're sorry`);\n});",
+              "err": {},
+              "uuid": "8bad6d5b-6077-4249-acb8-7ede3a3c572a",
+              "parentUUID": "80434f58-2de4-4dec-ac1d-b7fd6cd4ee48",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should check the forgot password flow",
+              "fullTitle": "login/signup suite should check the forgot password flow",
+              "timedOut": null,
+              "duration": 5911,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#signInOrRegister\").click();\ncy.origin(\"https://dev-mlluudmotpwoldtv.us.auth0.com\", {\n  args: {}\n}, ({}) => {\n  //Click forgot password button\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > p:nth-child(4) > a:nth-child(1)`).click(); //Title of page should include text Reset your password\n  cy.get(`div[title='Reset your password']`).should('have.text', 'Reset your password'); //Add email and click send email\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > input:nth-child(2)`).type('xyz@gmail.com');\n  cy.get(`.auth0-label-submit`).click(); //check for confirmation message\n  cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('contain.text', `We've just sent`);\n});",
+              "err": {},
+              "uuid": "7bc93144-d432-4695-bad1-7f5db8964fbc",
+              "parentUUID": "80434f58-2de4-4dec-ac1d-b7fd6cd4ee48",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3f4792b4-ef97-4123-80bc-6ca62bb812f5",
+            "f2d710fe-ccfa-4143-ad3d-f51c399cf82f",
+            "8bad6d5b-6077-4249-acb8-7ede3a3c572a",
+            "7bc93144-d432-4695-bad1-7f5db8964fbc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31187,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

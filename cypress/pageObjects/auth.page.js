@@ -22,20 +22,16 @@ class Authentication{
         return (`.auth0-lock-alternative-link`)
     }
 
-    get googleLoginBtn(){
-        return (`.auth0-lock-social-button-text`)
-    }
-
     get signinTabBtn(){
         return (`li[class='auth0-lock-tabs-current'] span`)
     }
 
-    get googleSignUpBtn(){
-        return (`.auth0-lock-social-button-text`)
-    }
-
     get signupBtn(){
         return (`.auth0-label-submit`)
+    }
+
+    get pageTitle(){
+        return cy.get(`div[title='Reset your password']`)
     }
     //#endregion
 
@@ -47,20 +43,11 @@ class Authentication{
         this.loginBtn.click()
     }
 
-    googleLogin(){
-        this.googleLoginBtn.click() 
-    }
-
     userSignup(email, password){
         this.emailField.type(email)
         this.passwordField.type(password)
         this.signupBtn.click()
     }
-
-    googleSignup(){
-        this.googleSignUpBtn.click()
-    }
-
 
     forgotPassword(){
         this.forgotPasswordBtn.click()

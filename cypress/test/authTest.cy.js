@@ -3,27 +3,7 @@ describe ('login/signup suite', ()=>{
         cy.visit('/')
     })
 
-    it.only('should signup with valid',()=>{
-
-        cy.get("#signInOrRegister").click();
-        
-        cy.origin(
-            "https://dev-mlluudmotpwoldtv.us.auth0.com",
-            { args: {} },
-            ({}) => {
-                
-                cy.get(`auth0-lock-tabs-container>ul>li:nth-child(2)>a`).click()
-                cy.get(`input[placeholder='yours@example.com']`).type("ghi@gmail.com");
-                cy.get(`input[placeholder='your password']`).type("Pass12rd", { log: false });
-                cy.get(".auth0-label-submit").click();
-            }
-        )
-       
-        cy.get(`.chakra-heading.css-kmq9po`).should('contain.text', 'Automation Camp Store')
-        cy.url().should('include','/products')
-    }),
-
-    it('should login with valid',()=>{
+     it('should login with valid',()=>{
 
         cy.get("#signInOrRegister").click();
         
@@ -57,9 +37,7 @@ describe ('login/signup suite', ()=>{
 
                 cy.get(`body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)`).should('contain.text', 'Wrong')
             }
-        )
-       
-                
+        )          
     }),
 
     //Negative test for signup

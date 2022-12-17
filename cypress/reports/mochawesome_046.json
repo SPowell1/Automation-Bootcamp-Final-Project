@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-12-17T10:39:23.835Z",
+    "end": "2022-12-17T10:40:54.463Z",
+    "duration": 90628,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6e99980b-0552-4501-876b-55e91c8d95a9",
+      "title": "",
+      "fullFile": "cypress\\test\\checkoutTest.cy.js",
+      "file": "cypress\\test\\checkoutTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e44d88f1-e7c0-4e7e-a055-d600196ac036",
+          "title": "Checkout Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete billing form",
+              "fullTitle": "Checkout Test Suite should complete billing form",
+              "timedOut": null,
+              "duration": 27755,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_checkout.default.billingForm).should('exist');\ncy.wait(2000);\n_checkout.default.completeBillingForm();",
+              "err": {},
+              "uuid": "9b091007-6ab9-43ec-8481-49d897539a20",
+              "parentUUID": "e44d88f1-e7c0-4e7e-a055-d600196ac036",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should attempt to proceed to payment without country field",
+              "fullTitle": "Checkout Test Suite should attempt to proceed to payment without country field",
+              "timedOut": null,
+              "duration": 25657,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_checkout.default.incompleteBillingForm();\ncy.get(_checkout.default.requireFieldMsg).should('include.text', 'required');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the center of this element is hidden from view:\n\n`<button type=\"submit\" class=\"snipcart-button-primary snipcart-submit snipcart-base-button is-icon-right\">...</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the center of this element is hidden from view:\n\n`<button type=\"submit\" class=\"snipcart-button-primary snipcart-submit snipcart-base-button is-icon-right\">...</button>`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133296:74)\n    at ensureDescendents (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133337:5)\n    at possiblyScrollMultipleTimes (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133444:22)\n    at scrollContainers (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133467:16)\n    at possiblyScrollMultipleTimes (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133463:20)\n    at possiblyScrollMultipleTimes (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133456:24)\n    at scrollContainers (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133467:16)\n    at ensureDescendentsAndScroll (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133471:14)\n    at ensureElIsNotCovered (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133476:5)\n    at runAllChecks (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133670:52)\n    at retryActionability (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:133709:16)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise.attempt.Promise.try (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:8601:29)\n    at whenStable (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:151463:65)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:150871:14)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise._settlePromiseFromHandler (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9262:31)\n    at Promise._settlePromise (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9319:18)\n    at Promise._settlePromise0 (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9364:10)\n    at Promise._settlePromises (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9444:18)\n    at Promise._fulfill (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:9388:18)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11002:46)\nFrom Your Spec Code:\n    at Checkout.incompleteBillingForm (webpack:///./cypress/pageObjects/checkout.page.js:118:24)\n    at Context.eval (webpack:///./cypress/test/checkoutTest.cy.js:38:21)",
+                "diff": null
+              },
+              "uuid": "ad0f603c-23fc-4de7-ac37-964b54b9b58b",
+              "parentUUID": "e44d88f1-e7c0-4e7e-a055-d600196ac036",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should complete make payment",
+              "fullTitle": "Checkout Test Suite should complete make payment",
+              "timedOut": null,
+              "duration": 36728,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_checkout.default.completeBillingForm();\ncy.wait(2000);\n_checkout.default.completePaymentInfo();\ncy.wait(3000);\ncy.get(_checkout.default.invoiceTitle).should('exist');\ncy.get(_checkout.default.invoiceTotal).should('have.text', '$60.00');",
+              "err": {
+                "message": "TypeError: Timed out retrying after 4000ms: Cannot read properties of undefined (reading 'toLowerCase')",
+                "estack": "TypeError: Timed out retrying after 4000ms: Cannot read properties of undefined (reading 'toLowerCase')\n    at Object.short (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:167867:47)\n    at Function.result (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:41305:44)\n    at switchCase (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:167815:58)\n    at Object.stringify (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:167890:10)\n    at Assertion.<anonymous> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:134704:97)\n    at Assertion.overwritingPropertyGetter (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:83238:37)\n    at Reflect.get (<anonymous>)\n    at Object.proxyGetter [as get] (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:83356:22)\n    at applyChainer (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138870:22)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138911:16)\n    at arrayReduce (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:28294:21)\n    at Function.reduce (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:37346:14)\n    at applyChainers (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138888:68)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise.attempt.Promise.try (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:8601:29)\n    at Context.shouldFn (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138917:63)\n    at Context.should (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138936:23)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:134007:39)\n    at assertions (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:134279:16)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Object.gotValue (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:10471:18)\n    at Object.gotAccum (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:10458:25)",
+                "diff": null
+              },
+              "uuid": "5558a4ac-efd9-4cae-9780-9afcaff69645",
+              "parentUUID": "e44d88f1-e7c0-4e7e-a055-d600196ac036",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9b091007-6ab9-43ec-8481-49d897539a20"
+          ],
+          "failures": [
+            "ad0f603c-23fc-4de7-ac37-964b54b9b58b",
+            "5558a4ac-efd9-4cae-9780-9afcaff69645"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 90140,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

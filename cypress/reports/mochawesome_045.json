@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-17T10:33:46.628Z",
+    "end": "2022-12-17T10:34:26.088Z",
+    "duration": 39460,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f5e07353-d272-47f7-bffb-a069de49a70b",
+      "title": "",
+      "fullFile": "cypress\\test\\checkoutTest.cy.js",
+      "file": "cypress\\test\\checkoutTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b20aca47-ebec-4a44-a4a4-0a20fbc98722",
+          "title": "Checkout Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete make payment",
+              "fullTitle": "Checkout Test Suite should complete make payment",
+              "timedOut": null,
+              "duration": 39264,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_checkout.default.completeBillingForm();\ncy.wait(2000);\n_checkout.default.completePaymentInfo();\ncy.wait(2000);\ncy.get(_checkout.default.invoiceTitle).should('exist');\ncy.get(_checkout.default.invoiceTotal).should('have.text', '$60.00');",
+              "err": {
+                "message": "TypeError: Timed out retrying after 4000ms: Cannot read properties of undefined (reading 'toLowerCase')",
+                "estack": "TypeError: Timed out retrying after 4000ms: Cannot read properties of undefined (reading 'toLowerCase')\n    at Object.short (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:167867:47)\n    at Function.result (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:41305:44)\n    at switchCase (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:167815:58)\n    at Object.stringify (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:167890:10)\n    at Assertion.<anonymous> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:134704:97)\n    at Assertion.overwritingPropertyGetter (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:83238:37)\n    at Reflect.get (<anonymous>)\n    at Object.proxyGetter [as get] (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:83356:22)\n    at applyChainer (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138870:22)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138911:16)\n    at arrayReduce (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:28294:21)\n    at Function.reduce (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:37346:14)\n    at applyChainers (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138888:68)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Promise.attempt.Promise.try (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:8601:29)\n    at Context.shouldFn (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138917:63)\n    at Context.should (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:138936:23)\n    at <unknown> (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:134007:39)\n    at assertions (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:134279:16)\n    at tryCatcher (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:11327:23)\n    at Object.gotValue (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:10471:18)\n    at Object.gotAccum (https://ui-automation-camp.vercel.app/__cypress/runner/cypress_runner.js:10458:25)",
+                "diff": null
+              },
+              "uuid": "b6b83a48-e9b6-4f1d-8b22-141b0b664257",
+              "parentUUID": "b20aca47-ebec-4a44-a4a4-0a20fbc98722",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b6b83a48-e9b6-4f1d-8b22-141b0b664257"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 39264,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

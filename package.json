@@ -23,6 +23,7 @@
   "homepage": "https://github.com/SPowell1/Automation-Bootcamp-Final-Project#readme",
   "devDependencies": {
     "cypress": "^12.0.2",
+    "cypress-iframe": "^1.0.1",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.2",
     "mochawesome-report-generator": "^6.2.0",

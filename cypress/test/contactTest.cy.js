@@ -41,12 +41,12 @@ describe('Contact Page Test Suite', ()=>{
 
     }),
 
-    it.only('should navigte to the Quality Works Twitter page',()=>{
+    it('should navigate to the Quality Works Twitter page',()=>{
          //navigate to contact page
          contactPage.contactBtn.click()
 
-         //locate twitter button and click it
-         cy.get('body > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > a:nth-child(5) > div:nth-child(1) > p:nth-child(2)').click()
-         cy.url().should('include','twitter.com')
+         //verify that the twitter element contains the link to the QW Twitter profile page
+         cy.get(`a[href='https://twitter.com/qualityworkscg']`).should('have.attr','href','https://twitter.com/qualityworkscg')
+         
     })
 })

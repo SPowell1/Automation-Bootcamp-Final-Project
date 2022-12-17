@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-17T07:31:03.142Z",
+    "end": "2022-12-17T07:31:23.565Z",
+    "duration": 20423,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7390c4cd-fa15-4071-aa61-a41d570ca425",
+      "title": "",
+      "fullFile": "cypress\\test\\addToCart.cy.js",
+      "file": "cypress\\test\\addToCart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6bb3b291-c0b3-4983-ab05-db77cd095600",
+          "title": "Add to cart Test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add to cart then continue shopping",
+              "fullTitle": "Add to cart Test suite should add to cart then continue shopping",
+              "timedOut": null,
+              "duration": 20081,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_cart.default.addMultipleMugsToCart();\n/*Tests returns a type error or another error when the selector is called via the pageObject file\nCypress only finds the element if the selector is specified here\n*/\n\ncy.get(`.snipcart-modal__close-title`).should('be.visible'); //return to product page\ncy.get('.snipcart-modal__close-title').click();\ncy.get('a > .chakra-heading').contains('Automation Camp Store');",
+              "err": {},
+              "uuid": "229a5d97-facf-4dbd-b2c0-d1f9c44141bf",
+              "parentUUID": "6bb3b291-c0b3-4983-ab05-db77cd095600",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "229a5d97-facf-4dbd-b2c0-d1f9c44141bf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20081,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

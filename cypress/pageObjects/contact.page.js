@@ -40,7 +40,7 @@ class Contact{
     }
 
     get twitterBtn(){
-        return cy.get(`//a[@href='https://twitter.com/qualityworkscg']//div//p`)
+        return cy.get(`a[href='https://twitter.com/qualityworkscg']`)
     }
 
     //#endregion

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-17T05:26:45.325Z",
+    "end": "2022-12-17T05:27:08.396Z",
+    "duration": 23071,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77dc78fa-673a-4bad-aabc-3b0c93306d56",
+      "title": "",
+      "fullFile": "cypress\\test\\prodDetailsTest.cy.js",
+      "file": "cypress\\test\\prodDetailsTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27d827e2-0d74-47f2-a5ac-fcc3ee479a3f",
+          "title": "Product Details Page Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should switch to the next product image",
+              "fullTitle": "Product Details Page Test Suite should switch to the next product image",
+              "timedOut": null,
+              "duration": 22850,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(1500);\ncy.url().should('include', '/products/quality-hat');\ncy.wait(2000);\ncy.get(_prodDetails.default.nextImgBtn).should('exist');\ncy.get(_prodDetails.default.nextImgBtn).click();\ncy.get(_prodDetails.default.prevImgBtn).should('exist');",
+              "err": {},
+              "uuid": "ecda56d1-e53f-4f9a-91ec-882adda66ab7",
+              "parentUUID": "27d827e2-0d74-47f2-a5ac-fcc3ee479a3f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ecda56d1-e53f-4f9a-91ec-882adda66ab7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22850,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

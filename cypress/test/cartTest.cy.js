@@ -19,7 +19,7 @@ describe('Add to cart Test Suite', ()=>{
         )
           //Add items to cart and navigate to cart
           cy.wait(3000) //wait for the page to load
-          prodGalleryPage.hatAddToCart()
+          cy.get(`button[data-item-name$='Quality Fitted Hat']`).click().click()//Add quality fitted hat to cart
     })
 
     it ('should remove item from cart',()=>{
@@ -35,7 +35,7 @@ describe('Add to cart Test Suite', ()=>{
         cartPage.continueShoppingBtn.click()
     }),
 
-    it('should increment then decrement item qty in cart',()=>{      
+    it.only('should increment then decrement item qty in cart',()=>{      
           
           //increment item in cart to 3
           cartPage.increaseProdQty3()
@@ -47,8 +47,7 @@ describe('Add to cart Test Suite', ()=>{
 
     }),
 
-    it.only('should navigate to checkout from the cart',()=>{
-        prodGalleryPage.hatAddToCart()
+    it('should navigate to checkout from the cart',()=>{
         cartPage.goToCheckout()
         //check that the url is for the checkout page
         cy.url().should('include','/products#/checkout')

@@ -28,6 +28,10 @@ class Cart{
         return cy.get(`.snipcart-modal__close-title.snipcart__font--std`)
     }
 
+    get cartHeader(){
+        return (`.snipcart-cart-header__title.snipcart__font--black.snipcart__font--secondary`)
+    }
+
     //#endregion 
     //#region Methods
 

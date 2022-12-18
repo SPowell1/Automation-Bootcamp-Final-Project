@@ -10,7 +10,7 @@ get truckerHatImgBtn(){
 }
 
 get nextImgBtn(){
-    return (`button[class= "control-arrow control-next"]`/*.carousel-slider > .control-next`*/)
+    return (`button[class= "control-arrow control-next"]`)
 }
 
 get relatedProductsTitle(){
@@ -32,10 +32,6 @@ get prevImgBtn(){
 
 //#endregion
 //#region Methods
-// addTruckerHat(){
-//     cy.wait(2000)//wait for page to completely load
-//     this.truckerHatCartBtn.click()
-// }
 
 moveToNextProdImg(){
     cy.wait(2000)//wait for page to completely load
@@ -44,10 +40,10 @@ moveToNextProdImg(){
 
 
 /*Tests returns a type error or another error when the selector is called via the pageObject file
-        Cypress only finds the element if the selector is specified here
+        Cypress only finds the element if the selector is specified in the spec file
         */
 navigateToARelatedProd(){
-    //cy.get(this.relatedProdImg).should('be.visible')
+    
     this.relatedProdImg.click()
 }
 //#endregion

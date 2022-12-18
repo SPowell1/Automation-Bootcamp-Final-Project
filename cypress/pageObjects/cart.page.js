@@ -45,6 +45,10 @@ class Cart{
     get mugTotal(){
         return cy.get('.snipcart-summary-fees__amount')
     }
+
+    get cartMugDesc(){
+        return cy.get(`.snipcart-item-line__info > .snipcart__font--std`)
+    }
     //Product page Selectors
     get homepageTitle(){
         return cy.get('a > .chakra-heading')
@@ -66,8 +70,8 @@ class Cart{
     //#region Methods
     addSingleMugToCart(){
         this.mugImg.scrollIntoView()
-        cy.get(this.mugAddToCartBtn).should('be.visible')
-        cy.get(this.mugAddToCartBtn).click()
+        cy.wait(3000)
+        this.mugAddToCartBtn.click()
     }
 
     addMultipleMugsToCart(){

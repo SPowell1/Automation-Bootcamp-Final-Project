@@ -22,8 +22,9 @@ describe('Add to cart Test suite', ()=>{
 
     it('should add a single item to cart from the product page', ()=>{
         cartPage.addSingleMugToCart()
-        cy.get(cartPage.cartHeader).should('include.text','Cart')
-        cy.get(cartPage.cartItemTitle).should('have.text',' Quality Mug ')
+        cy.wait(2000)
+        cy.get(`.snipcart-item-line__info > .snipcart__font--std`).contains('Mug')
+        //cy.get(cartPage.cartItemTitle).should('have.text',' Quality Mug ')
 
     }),
 

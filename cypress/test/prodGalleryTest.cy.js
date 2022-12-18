@@ -26,7 +26,7 @@ describe ('Product Gallery Homepage Test Suite', ()=>{
         
         //return to product page using the back to products button
         cy.get(`.chakra-heading.css-18j379d`).click()
-        // cy.contains('Automation Camp Store')
+        
 
     })
 

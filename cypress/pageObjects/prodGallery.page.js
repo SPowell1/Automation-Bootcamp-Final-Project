@@ -43,13 +43,10 @@ class ProductGallery{
     }
 
     navigateToCartPage(){
-        //this.cartBtn.scrollIntoView()
         this.cartBtn.click()
     }
 
     signOut(){
-        
-        //this.signoutBtn.scrollIntoView()
         this.signoutBtn.click()
     
     }

@@ -19,7 +19,7 @@ describe('Add to cart Test Suite', ()=>{
         )
           //Add items to cart and navigate to cart
           cy.wait(4000) //wait for the page to load
-          cy.get(`#product-0 > #add-to-cart`).click()//Add fitted hat to cart
+          cy.get(`.chakra-button.snipcart-add-item.css-betff9[data-item-id='quality-hat-model']`).click()//Add fitted hat to cart
     })
 
     it ('should remove item from cart',()=>{

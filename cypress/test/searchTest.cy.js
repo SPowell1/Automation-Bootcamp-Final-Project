@@ -39,12 +39,12 @@ describe ('Search page Test suites', ()=>{
 
         //Uppercase search HAT
         searchPage.searchUpperCaseSpeltItem()
-        cy.get(`#product-0`).should('eq',product0)
-        cy.get(`#product-1`).should('eq',product1)
+        cy.get(`#product-0`).should('be.visible')
+        cy.get(`#product-1`).should('be.visible')
 
     })
 
-    it.only('should search for a non-existent product',()=>{
+    it('should search for a non-existent product',()=>{
         searchPage.searchNonexistentItem()
         const expectedCount= 0 //expected # of products that should be on the page
         cy.get(`div[class='chakra-stack css-uaqjf']`).should('have.length', expectedCount)

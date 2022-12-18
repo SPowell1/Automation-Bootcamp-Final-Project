@@ -21,28 +21,29 @@ describe('Sort Test Suite', () => {
         )
     })
 
-    it.only('should sort product list from Z-A', () => {
-        Product.selectSort(ProductData.sort['Z to A'])
+    it('should sort product list from A-Z', () => {
+        Product.selectSort(ProductData.sort['A to Z'])
 
-        // Sort data list based on name, from Z to A
-        ProductData.products.sort().reverse()
+        // Sort data list based on name, from A to Z
+        ProductData.products.sort()
 
         cy.get(Product.itemsName).each(($elem, index) => {
             expect($elem.text()).equal(ProductData.products[index].name)
         })
-    })
+    }),
 
-    it('should sort product list from low to high', () => {
-        Product.selectSort(ProductData.sort['Low to High'])
+    it('should sort product list from Z to A', () => {
+        Product.selectSort(ProductData.sort['Z to A'])
 
-        // Sort data list based on price, from low to high
-        ProductData.products.sort((a, b) => a.price - b.price)
+        // Sort data list based on name, from Z to A
+        ProductData.productsZA.sort().reverse()
 
-        cy.get(Product.itemsPrice).each(($elem, index) => {
-            expect($elem.text()).equal(`${ProductData.products[index].price}`)
+        cy.get(Product.itemsName).each(($elem, index) => {
+            expect($elem.text()).equal(ProductData.productsZA[index].name)
         })
     })
 
+   
     it('should sort product list from high to low', () => {
         Product.selectSort(ProductData.sort['High to Low'])
 

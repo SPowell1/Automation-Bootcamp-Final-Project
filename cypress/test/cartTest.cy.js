@@ -24,7 +24,7 @@ describe('Add to cart Test Suite', ()=>{
 
     it ('should remove item from cart',()=>{
         //check that the page has the product added
-         cy.get(`.snipcart-layout.snipcart-modal`).contains(' Quality Fitted Hat ')
+        //cy.get('.snipcart-item-line__title').contains(' Quality Fitted Hat ')
 
         //Remove item from cart
         cy.wait(1500)

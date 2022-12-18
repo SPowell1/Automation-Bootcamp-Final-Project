@@ -26,7 +26,7 @@ describe('Product Details Page Test Suite',()=>{
           cy.get(`.chakra-image.css-2i84d9[src='/images/quality-hat.jpg']`).click()//Add quality trucker hat to cart
     })
 
-    it.only('should switch to the next product image',()=>{   
+    it('should switch to the next product image',()=>{   
         cy.wait(1500)   
         cy.url().should('include', '/products/quality-hat')
         cy.wait(2000)
